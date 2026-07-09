@@ -237,8 +237,8 @@ const MARKER_IMAGES_URL = '/images/games/gothic-1-remake/markers@2x.png?MTkzNzIz
             <span class="navbar-toggler-icon navbar-toggler-categories"></span>
         </button>
 
-        <button id="navbar-toggler-user" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse-user" data-parent="#header" aria-controls="navbar-collapse-user" aria-expanded="false" aria-label="Toggle user navigation"
-                data-placement="bottom" title="Login to track your progress and add personal locations">
+        <button id="navbar-toggler-user" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse-user" data-parent="#header" aria-controls="navbar-collapse-user" aria-expanded="false" aria-label="Toggle local progress navigation"
+                data-placement="bottom" title="Track progress and add personal locations locally">
             <span class="navbar-toggler-icon navbar-toggler-user"></span>
         </button>
 
@@ -621,18 +621,7 @@ const MARKER_IMAGES_URL = '/images/games/gothic-1-remake/markers@2x.png?MTkzNzIz
                 <div id="nitro-floating"></div>
             </div>
         
-        <div id="blobby-left" class="text-center pogo">
-            <div id="blobby-left-inner" data-pogo="sidebar">
-            </div>
-            <div class="text-center mb-1 mt-1">
-                Ad Blocker? Consider an <b>upgrade to PRO</b> to remove ads and get extra features.
-            </div>
-            <a href=https://mapgenie.io/gothic-1-remake/upgrade target="_blank">
-                <button id="button-upgrade" class="btn btn-outline-secondary btn-upgrade">
-                    Upgrade To Pro
-                </button>
-            </a>
-        </div>
+        <div id="blobby-left" class="text-center pogo"></div>
     </div>
 
 
@@ -712,7 +701,7 @@ const MARKER_IMAGES_URL = '/images/games/gothic-1-remake/markers@2x.png?MTkzNzIz
                     </div>
 
                     <div class="modal-body">
-                        <div class="upgrade-dialog-text">
+                        <div class="embed-dialog-text">
                             Embed this map on your own website by copying the code below and adding it to your html
                         </div>
                         <div class="position-relative form-group mt-3">
@@ -792,6 +781,7 @@ const MARKER_IMAGES_URL = '/images/games/gothic-1-remake/markers@2x.png?MTkzNzIz
       };
       window.isOverwolf = false;
     </script>
+            <script src="local-backend.js"></script>
             <script src="cdn.mapgenie.io/js/map.js?id=045987217d88d63c60ed6b7e4137091b"></script>
     <script>
       if (isMobile) {

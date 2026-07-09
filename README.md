@@ -11,6 +11,8 @@ Includes:
 - All CSS, JS, fonts (including the mapgenie icon font, ionicons, and the two
   Adobe/Typekit web fonts), and UI images
 - Mapbox GL JS (the map rendering engine) served locally
+- Local browser-only progress tracking, personal notes, tracked categories,
+  presets, and routes without logging in
 
 Ad, analytics, and consent-management scripts (Google Tag Manager, Chartbeat,
 comScore, Microsoft Clarity, an ad exchange, etc.) were stripped out since
@@ -30,10 +32,28 @@ python3 serve.py
 Then open **http://localhost:8000/** in your browser. No internet connection
 is needed after that.
 
+## Local progress data
+
+Login and upgrade prompts are disabled. The map now behaves like a local
+unlimited user, and account-style data is stored in your browser's
+`localStorage` under:
+
+```
+mapgenie:valley-of-mines:local-state:v1
+```
+
+That data is scoped to the browser profile and origin you use to open the map.
+It is not synced anywhere. To reset local progress, run this in the browser
+console:
+
+```
+localMapState.reset()
+```
+
 ## Known limitations
 
-- Login/tracking progress, adding personal notes, and other account-based
-  features won't work (they require mapgenie's backend).
+- Local progress is browser/profile-specific. Clearing site data or using a
+  different browser will start with fresh progress.
 - The two Typekit heading fonts are mirrored, but if Adobe ever revokes the
   signed font URLs this kit was using, that's baked into the downloaded files
   already, so it doesn't matter — they'll keep working.
