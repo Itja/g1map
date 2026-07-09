@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../../fonts/gothic-1-remake/icons/icomoon.eot?rs0kxh');
+  src:  url('../../../fonts/gothic-1-remake/icons/icomoon.eot?rs0kxh#iefix') format('embedded-opentype'),
+    url('../../../fonts/gothic-1-remake/icons/icomoon.ttf?rs0kxh') format('truetype'),
+    url('../../../fonts/gothic-1-remake/icons/icomoon.woff?rs0kxh') format('woff'),
+    url('../../../fonts/gothic-1-remake/icons/icomoon.svg?rs0kxh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weapon:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-transition:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-trader:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-teacher:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-swamp_camp_quest:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-rune:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-ring:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-quest_item:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-potion:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-ore_nugget:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-old_camp_quest:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-npc:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-new_camp_quest:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-miscellaneous:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-material:before {
+  content: "\e90e";
+  color: #fff;
+}
+.icon-magic_scroll:before {
+  content: "\e90f";
+  color: #fff;
+}
+.icon-locked_door:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-key:before {
+  content: "\e911";
+  color: #fff;
+}
+.icon-inscryption_station:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-herb:before {
+  content: "\e913";
+  color: #fff;
+}
+.icon-forging_station:before {
+  content: "\e914";
+  color: #fff;
+}
+.icon-easter_egg:before {
+  content: "\e915";
+  color: #fff;
+}
+.icon-document:before {
+  content: "\e916";
+  color: #fff;
+}
+.icon-cooking_station:before {
+  content: "\e917";
+  color: #fff;
+}
+.icon-climbable_wall:before {
+  content: "\e918";
+  color: #fff;
+}
+.icon-chest:before {
+  content: "\e919";
+  color: #fff;
+}
+.icon-cave:before {
+  content: "\e91a";
+  color: #fff;
+}
+.icon-camp:before {
+  content: "\e91b";
+  color: #fff;
+}
+.icon-blacksmith:before {
+  content: "\e91c";
+  color: #fff;
+}
+.icon-arrow:before {
+  content: "\e91d";
+  color: #fff;
+}
+.icon-armor:before {
+  content: "\e91e";
+  color: #fff;
+}
+.icon-area_map:before {
+  content: "\e91f";
+  color: #fff;
+}
+.icon-area:before {
+  content: "\e920";
+  color: #fff;
+}
+.icon-amulet:before {
+  content: "\e921";
+  color: #fff;
+}
