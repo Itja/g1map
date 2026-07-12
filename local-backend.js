@@ -87,6 +87,14 @@
     return parsed.pathname.replace(/\/+$/, "");
   }
 
+  function staticApiUrl(url) {
+    var appBasePath = window.appBasePath || "";
+    if (!appBasePath || typeof url !== "string" || url.indexOf("/api/v1/maps/") !== 0) {
+      return url;
+    }
+    return appBasePath + url;
+  }
+
   function idFromPath(path) {
     var value = path.split("/").pop();
     return Number(value);
@@ -324,10 +332,29 @@
         config.adapter = function (adapterConfig) {
           return handleLocalRequest(adapterConfig);
         };
+      } else {
+        config.url = staticApiUrl(config.url);
       }
       return config;
     });
     return axios;
+  }
+
+  function installFetchShim() {
+    if (!window.fetch || window.fetch.__localBackendInstalled) return;
+
+    var nativeFetch = window.fetch.bind(window);
+    var fetchShim = function (input, init) {
+      if (typeof input === "string") {
+        return nativeFetch(staticApiUrl(input), init);
+      }
+      if (input && typeof input.url === "string" && input.url.indexOf("/api/v1/maps/") === 0) {
+        input = new Request(staticApiUrl(input.url), input);
+      }
+      return nativeFetch(input, init);
+    };
+    fetchShim.__localBackendInstalled = true;
+    window.fetch = fetchShim;
   }
 
   function installAxiosSetter() {
@@ -421,6 +448,7 @@
     window.mapData.maxMarkedLocations = MAX_MARKED_LOCATIONS;
   }
 
+  installFetchShim();
   installAxiosSetter();
   installUiCleanup();
 })();
