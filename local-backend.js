@@ -438,6 +438,15 @@
           element.textContent = "Save Route";
         }
       });
+      document.querySelectorAll("#toast-container .toast").forEach(function (element) {
+        if (element.textContent.indexOf("Loading locations...") !== -1) {
+          element.remove();
+        }
+      });
+      var toastContainer = document.getElementById("toast-container");
+      if (toastContainer && !toastContainer.children.length) {
+        toastContainer.remove();
+      }
       removeGeneratedAuthUi();
     };
 
